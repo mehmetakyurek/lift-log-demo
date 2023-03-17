@@ -22,7 +22,7 @@ const Login: FC<{ onAuth: (id: string) => void }> = (props) => {
                 if (res.data.login) props.onAuth(res.data.login)
                 else setNotfound(true);
                 setLoading(false);
-            })
+            }).catch(console.log)
     }, [userName, pwd, setLoading]);
 
     const signup = useCallback(() => {
